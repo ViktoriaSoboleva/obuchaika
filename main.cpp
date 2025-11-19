@@ -1,27 +1,9 @@
-#include <clocale>
-#include <cstdlib>
 #include <iostream>
-int main(){
-    std::setlocale(LC_ALL, "");
+#include <windows.h>
+#include "menu_manager.hpp"
 
-    int user_input;
-    do {
-        std::cout << "Обучайка приветствует тебя, мой юный ученик!" << std::endl;
-        std::cout << "1 - хочу учиться математике" << std::endl;
-        std::cout << "0 - я лучше пойду полежу ..." << std::endl;
-        std::cout << "Обучайка";
-
-        std::cin >> user_input;
-        if (user_input == 1){
-            //TODO
-        }
-        else if (user_input == 0){
-            exit(0);
-        }
-
-        std::cout << std::endl;
-
-    }while (true);
-    
+int main() {
+    SetConsoleOutputCP(CP_UTF8);
+    handle_main_menu();
     return 0;
 }
